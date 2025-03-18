@@ -1,0 +1,583 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  padding: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.terms-container {
+  background-color: #f8fcfd;
+  margin: 10px 10px;
+  padding: 40px 60px;
+}
+
+.payment-container {
+  margin: 10px 20px;
+  padding: 10px 45px;
+}
+
+.form-container,
+.invoice-container {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30px;
+}
+
+.form-header,
+.header {
+  background-color: #0f3c5d;
+  color: white;
+  padding: 20px 30px;
+}
+
+.form-header h2,
+.header h1 {
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+
+.header {
+  padding: 30px;
+  text-align: center;
+  position: relative;
+}
+
+.header h1 {
+  font-size: 40px;
+  margin-bottom: 5px;
+  font-weight: 300;
+}
+
+.header h2 {
+  font-size: 24px;
+  font-weight: normal;
+}
+
+.form-body {
+  padding: 20px 30px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0f3c5d;
+}
+
+.form-group input,
+.form-group select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.dressing-details {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.package-items {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+
+.item-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2.5fr 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.item-header {
+  font-weight: bold;
+  color: #0f3c5d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.decorative-dots {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+/* Billing info area */
+.billing-info {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 10px;
+  padding: 10px 20px;
+  background-color: #e6f3f5;
+  font-size: 12px;
+}
+
+.billing-section {
+  margin-bottom: 8px;
+}
+
+.billing-section label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 2px;
+  color: #0f3c5d;
+}
+
+.billing-section span {
+  display: block;
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 4px;
+  min-height: 24px;
+}
+
+/* Invoice styling to match the new design */
+/* .invoice-header {
+  background-color: #0f3c5d;
+  color: white;
+  padding: 25px 0 25px 250px;
+  text-align: center;
+}
+
+.invoice-header h1 {
+  font-size: 45px;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.invoice-header h2 {
+  font-size: 24px;
+  font-weight: normal;
+} */
+
+.invoice-client-info {
+  background-color: #e6f3f5;
+  padding: 15px 50px 5px 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+}
+
+.info-group {
+  margin-bottom: 5px;
+}
+
+.info-group label {
+  /* display: block; */
+  font-size: 14px;
+  font-weight: 600;
+  color: #0f3c5d;
+}
+
+.package-title {
+  display: flex;
+  justify-content: space-between;
+  background-color: #e6f3f5;
+  padding: 10px 40px;
+  margin-top: 15px;
+}
+
+.package-title h2 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #0f3c5d;
+}
+
+.invoice-table {
+  width: 90%; /* Reduced from 100% to create space on both sides */
+  border-collapse: collapse;
+  margin-left: auto; /* Centers the table */
+  margin-right: auto; /* Centers the table */
+  max-width: 1200px; /* Optional: sets a maximum width */
+}
+
+.invoice-table th {
+  background-color: #0f3c5d;
+  color: white;
+  text-align: center; /* Changed from left to center */
+  padding: 10px 20px 10px 20px; /* Changed padding to be more symmetrical */
+  font-size: 14px;
+}
+
+.invoice-table th:first-child {
+  text-align: left; /* Changed from start to center */
+  padding-left: 30px; /* Changed from 30px */
+  padding-right: 0px; /* Changed from 0px */
+}
+
+.extras-header th {
+  background-color: #e6f3f5;
+  color: #0f3c5d;
+  padding-top: 30px;
+}
+
+.invoice-table td {
+  text-align: center;
+  padding: 12px 15px;
+  border-bottom: 1px solid #e6f3f5;
+  font-size: 12px;
+}
+
+/* Override the first-child alignment specifically */
+.invoice-table tbody td:first-child {
+  padding-left: 30px; /* Changed from 30px */
+  padding-right: 0px; /* Changed from 0px */
+  text-align: left; /* Changed from start to center */
+}
+
+.invoice-table td:last-child {
+  padding-left: 0px;
+}
+
+.invoice-table tr:nth-child(even) {
+  background-color: #f8fcfd;
+}
+
+.extras-table {
+  width: 90%;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1200px;
+}
+
+.extras-table th {
+  background-color: #0f3c5d;
+  color: white;
+  text-align: center; /* Changed from left to center */
+  padding: 10px 20px; /* Added standardized padding */
+}
+
+.extras-table td {
+  text-align: left;
+  padding: 12px 30px;
+  border-bottom: 1px solid #e6f3f5;
+  font-size: 12px;
+}
+
+/* Override the first-child alignment specifically */
+.extras-table td:first-child {
+  width: 40%;
+  /* text-align: left; Changed from start to center */
+  padding-left: 30px; /* Changed from 30px */
+  padding-right: 0px; /* Changed from 0px */
+}
+
+.extras-table td:last-child {
+  padding-left: 5px; /* Changed from 70px */
+  padding-right: 15px; /* Added for symmetry */
+}
+
+.extras-table tr:nth-child(even) {
+  background-color: #f8fcfd;
+}
+
+.invoice-totals {
+  text-align: right;
+  padding: 20px 40px 20px 0;
+  background-color: #e6f3f5;
+}
+
+.total-row {
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.total-row.grand-total {
+  font-weight: bold;
+  font-size: 16px;
+  color: #0f3c5d;
+}
+
+.decorative-corner {
+  position: relative;
+  height: 100px;
+  background-color: #e6f3f5;
+}
+
+.corner-curves {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+  opacity: 0.3;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #0f3c5d;
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+button {
+  background-color: #0f3c5d;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin: 0 5px;
+}
+
+button:hover {
+  background-color: #1a5980;
+}
+
+.hidden {
+  display: none;
+}
+
+.extras-container {
+  margin-top: 20px;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.extras-header {
+  font-weight: bold;
+  color: #0f3c5d;
+  margin-bottom: 15px;
+}
+
+.extras-row {
+  display: grid;
+  grid-template-columns: 0.5fr 2fr 1.5fr 2fr 1fr;
+  gap: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+.extras-item-header {
+  font-weight: bold;
+  color: #0f3c5d;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: 10px;
+}
+
+.wedding-package-price {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 15px;
+  background-color: #e6f3f5;
+  border-radius: 5px;
+}
+
+.wedding-package-price label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #0f3c5d;
+}
+
+.wedding-package-price input {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+/* PDF specific styles */
+.pdf-container {
+  background-color: white;
+  position: relative;
+  padding: 0;
+  margin: 0;
+}
+
+@media print {
+  body {
+    padding: 0;
+    background-color: white;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  .form-container,
+  #invoiceButtons {
+    display: none;
+  }
+
+  .invoice-container {
+    box-shadow: none;
+    border: none;
+  }
+}
+
+/* Additional styles for terms and conditions section */
+.invoice-section {
+  font-size: 12px;
+  /* margin: 10px 20px; */
+  /* padding: 25px 60px; */
+  background-color: #fff;
+  border-radius: 5px;
+}
+
+.contact-info {
+  display: flex;
+  justify-content: flex-end; /* Aligns the content to the right */
+  width: 100%;
+  padding: 15px 0;
+}
+
+.payment-title {
+  background-color: #0f3c5d;
+  color: white;
+  text-align: left;
+  padding: 10px 20px 10px 60px;
+  font-size: 16px;
+}
+
+.terms-section {
+  background-color: #f8fcfd;
+  /* padding: 0 20px; */
+}
+
+.section-title {
+  color: #0f3c5d;
+  font-size: 16px;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #e6f3f5;
+}
+
+.client-info-row {
+  display: flex;
+  gap: 50px;
+  margin-left: 20px;
+}
+
+.info-row {
+  display: flex;
+  gap: 20px;
+  /* margin-bottom: 10px; */
+}
+
+.bridal-group {
+  margin: 10px 0 20px 20px;
+}
+
+.info-group.half {
+  flex: 1;
+}
+
+.terms-content h4 {
+  color: #0f3c5d;
+  margin: 15px 0 5px 0;
+}
+
+.agreement-section {
+  margin-top: 0px;
+  padding-top: 10px;
+  border-top: 1px dashed #e6f3f5;
+}
+
+.signature-line {
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.signature-line label {
+  width: 100px;
+  font-weight: bold;
+  color: #0f3c5d;
+}
+
+.signature-field {
+  /* flex: 1;
+            border-bottom: 1px solid #ccc; */
+  padding-bottom: 5px;
+  padding-left: 5px;
+}
+
+.bank-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-info {
+  flex: 2;
+}
+
+.qr-code {
+  flex: 1;
+  text-align: right;
+}
+
+.company-details {
+  text-align: left;
+}
+
+.company-details h3 {
+  color: #0f3c5d;
+  margin-bottom: 5px;
+}
+
+.company-details h4 {
+  color: #0f3c5d;
+  margin-bottom: 10px;
+}
+
+.company-details p {
+  margin: 5px 0;
+}
+
+.phone-icon,
+.email-icon,
+.location-icon,
+.web-icon {
+  display: inline-block;
+  width: 20px;
+  text-align: center;
+}
+
+.company-details i {
+  margin-right: 10px;
+  width: 16px;
+  text-align: center;
+  color: #0f3c5d; /* Use your brand color */
+}

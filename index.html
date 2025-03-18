@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Scene Wedding Photography</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        <!-- Data Entry Form -->
+        <div class="form-container" id="entryForm">
+            <div class="form-header">
+                <h2>Wedding Photography Package Details</h2>
+            </div>
+            
+            <div class="form-body">
+                <div class="">
+                    <div class="form-group">
+                        <label for="billedTo">Billed To:</label>
+                        <input type="text" id="billedTo" name="billedTo">
+                    </div>
+                </div>
+                <div class="form-row">    
+                    <div class="form-group">
+                        <label for="weddingDate">Wedding Date:</label>
+                        <input type="date" id="weddingDate" name="weddingDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="homecomingDate">Homecoming Date:</label>
+                        <input type="date" id="homecomingDate" name="homecomingDate">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="brideGroomName">Bride & Groom Name:</label>
+                        <input type="text" id="brideGroomName" name="brideGroomName">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="functionLocation">Function Location:</label>
+                        <input type="text" id="functionLocation" name="functionLocation">
+                    </div>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="brideContact">Bride Contact:</label>
+                        <input type="text" id="brideContact" name="brideContact">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="groomContact">Groom Contact:</label>
+                        <input type="text" id="groomContact" name="groomContact">
+                    </div>
+                </div>                
+                
+                <!-- Wedding Package Price -->
+                <div class="wedding-package-price">
+                    <div class="form-group">
+                        <label for="packagePrice">Wedding Package Price (LKR):</label>
+                        <input type="number" id="packagePrice" name="packagePrice" value="100000">
+                    </div>
+                    <div class="form-group">
+                        <label for="discountAmount">Discount Amount (LKR):</label>
+                        <input type="number" id="discountAmount" name="discountAmount" value="0">
+                    </div>
+                </div>
+                
+                <div class="package-items">
+                    <h3>Package Items</h3>
+                    
+                    <div class="item-row item-header">
+                        <div>Include</div>
+                        <div>Item</div>
+                        <div>Size</div>
+                        <div>Quantity</div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includeWeddingAlbum" checked>
+                        </div>
+                        <div>Wedding Album</div>
+                        <div>
+                            <select id="weddingAlbumSize">
+                                <option value="12 X 20">12 X 20</option>
+                                <option value="14 X 24">14 X 24</option>
+                                <option value="16 X 24">16 X 24</option>
+                                <option value="18 X 24">18 X 24</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="weddingAlbumQty" value="1" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includeWeddingEnlargement" checked>
+                        </div>
+                        <div>Wedding Enlargement</div>
+                        <div>
+                            <select id="weddingEnlargementSize">
+                                <option value="16 X 24">16 X 24</option>
+                                <option value="20 X 30">20 X 30</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="weddingEnlargementQty" value="1" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includeThankingCard" checked>
+                        </div>
+                        <div>Thanking card</div>
+                        <div>
+                            <select id="thankingCardSize">
+                                <option value="6 X 6">6 X 6</option>
+                                <option value="6 X 8">6 X 8</option>
+                                <option value="6 X 9">6 X 9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="thankingCardQty" value="1" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includeGroupPhoto" checked>
+                        </div>
+                        <div>Group Photo</div>
+                        <div>
+                            <select id="groupPhotoSize">
+                                <option value="10 X 15">10 X 15</option>
+                                <option value="12 X 18">12 X 18</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="groupPhotoQty" value="1" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includePreShootAlbum" checked>
+                        </div>
+                        <div>PRE-SHOOT Album</div>
+                        <div>
+                            <select id="preShootAlbumSize">
+                                <option value="8 X 24">8 X 24</option>
+                                <option value="12 X 16">12 X 16</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="preShootAlbumQty" value="1" min="0">
+                        </div>
+                    </div>
+                    
+                    <div class="item-row">
+                        <div>
+                            <input type="checkbox" id="includeFamilyAlbum" checked>
+                        </div>
+                        <div>Family Album</div>
+                        <div>
+                            <select id="familyAlbumSize">
+                                <option value="8 X 24">8 X 24</option>
+                                <option value="12 X 16">12 X 16</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="familyAlbumQty" value="1" min="0">
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Extras Container -->
+                <div class="extras-container">
+                    <h3 class="extras-header">Extras</h3>
+                    
+                    <div class="extras-row extras-item-header">
+                        <div>Include</div>
+                        <div>Item</div>
+                        <div>Size</div>
+                        <div>Quantity</div>
+                        <div>Price (LKR)</div>
+                    </div>
+                    
+                    <div class="extras-row">
+                        <div>
+                            <input type="checkbox" id="extraEnlargements" checked>
+                        </div>
+                        <div>Enlargements</div>
+                        <div>
+                            <select id="extraEnlargementsSize">
+                                <option value="12 X 20">12 X 20</option>
+                                <option value="14 X 24">14 X 24</option>
+                                <option value="16 X 24">16 X 24</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="extraEnlargementsQty" value="1" min="0">
+                        </div>
+                        <div>
+                            <input type="number" id="extraEnlargementsPrice" value="5000">
+                        </div>
+                    </div>
+                    
+                    <div class="extras-row">
+                        <div>
+                            <input type="checkbox" id="extraThankCard" checked>
+                        </div>
+                        <div>Thank Card</div>
+                        <div>
+                            <select id="extraThankCardSize">
+                                <option value="6 X 6">6 X 6</option>
+                                <option value="6 X 8">6 X 8</option>
+                                <option value="6 X 9">6 X 9</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="extraThankCardQty" value="1" min="0">
+                        </div>
+                        <div>
+                            <input type="number" id="extraThankCardPrice" value="2000">
+                        </div>
+                    </div>
+                    
+                    <div class="extras-row">
+                        <div>
+                            <input type="checkbox" id="extraAdditionalAlbum" checked>
+                        </div>
+                        <div>Additional Album</div>
+                        <div>
+                            <select id="extraAdditionalAlbumSize">
+                                <option value="12 X 20">12 X 20</option>
+                                <option value="14 X 24">14 X 24</option>
+                                <option value="16 X 24">16 X 24</option>
+                            </select>
+                        </div>
+                        <div>
+                            <input type="number" id="extraAdditionalAlbumQty" value="1" min="0">
+                        </div>
+                        <div>
+                            <input type="number" id="extraAdditionalAlbumPrice" value="10000">
+                        </div>
+                    </div>
+                    
+                    <div class="extras-row">
+                        <div>
+                            <input type="checkbox" id="extraGoingawayShoot" checked>
+                        </div>
+                        <div>Goingaway Shoot</div>
+                        <div>
+                            <!-- No size for Goingaway Shoot -->
+                            <span>N/A</span>
+                        </div>
+                        <div>
+                            <!-- No quantity for Goingaway Shoot -->
+                            <span>N/A</span>
+                        </div>
+                        <div>
+                            <input type="number" id="extraGoingawayShootPrice" value="15000">
+                        </div>
+                    </div>
+                    
+                    <div class="extras-row">
+                        <div>
+                            <input type="checkbox" id="extraTransport" checked>
+                        </div>
+                        <div>Transport</div>
+                        <div>
+                            <!-- No size for Transport -->
+                            <span>N/A</span>
+                        </div>
+                        <div>
+                            <input type="number" id="extraTransportQty" value="100" min="0" placeholder="Kilometers">
+                        </div>
+                        <div>
+                            <input type="number" id="extraTransportPrice" value="5000">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bridal Dressing Details -->
+                <div class="dressing-details">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bridalSalonInfo">Bridal Salon Name & Contact:</label>
+                            <input type="text" id="bridalSalonInfo" name="bridalSalonInfo">
+                        </div>
+                        <div class="form-group">
+                            <label for="groomDressingInfo">Groom's Dressing Person & Contact:</label>
+                            <input type="text" id="groomDressingInfo" name="groomDressingInfo">
+                        </div>
+                        <div class="form-group">
+                            <label for="bridalGroupAvailability">Bridal Group Availability:</label>
+                            <select id="bridalGroupAvailability">
+                                <option value="Yes / No">Yes/No</option>
+                                <option value="Yes">Yes</option>
+                                <option value="No">No</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="bridesmaidCount">Bridesmaid Count:</label>
+                            <input type="number" id="bridesmaidCount" name="bridesmaidCount" min="0" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="bestmanCount">Bestman Count:</label>
+                            <input type="number" id="bestmanCount" name="bestmanCount" min="0" value="">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="flowerGirlCount">Flower Girl Count:</label>
+                            <input type="number" id="flowerGirlCount" name="flowerGirlCount" min="0" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="pageboyCount">Pageboy Count:</label>
+                            <input type="number" id="pageboyCount" name="pageboyCount" min="0" value="">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="button-container">
+                    <button id="generateInvoiceBtn">Generate Invoice</button>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Invoice Preview (Initially Hidden) -->
+        <div class="invoice-container hidden" id="invoicePreview">
+            <!-- Header with logo and title -->
+            <div class="">
+                <img src="assets/head.png" alt="Modern Scene Logo" width="100%">
+                <!-- <h1>Modern Scene</h1>
+                <h2>Wedding Photography</h2> -->
+            </div>
+
+            <!-- Client Information -->
+            <div class="invoice-client-info">
+                <div class="client-info-row">
+                    <div class="info-group ">
+                        <label>Billed To:</label>
+                        <span id="displayBilledTo"></span>
+                    </div>
+                </div>
+
+                <div class="client-info-row">
+                    <div class="info-group half">
+                        <label>Wedding Date:</label>
+                        <span id="displayWeddingDate"></span>
+                    </div>
+                    <div class="info-group half">
+                        <label>Homecoming Date:</label>
+                        <span id="displayHomecomingDate"></span>
+                    </div>
+                </div>
+                
+                <div class="client-info-row">
+                    <div class="info-group half">
+                        <label>Bride & Groom Name:</label>
+                        <span id="displayBrideGroomName"></span>
+                    </div>
+                    <div class="info-group half">
+                        <label>Function Location:</label>
+                        <span id="displayFunctionLocation"></span>
+                    </div>
+                </div>
+                
+                
+                <div class="client-info-row">
+                    <div class="info-group half">
+                        <label>Groom Contact:</label>
+                        <span id="displayGroomContact"></span>
+                    </div>
+                    <div class="info-group half">
+                        <label>Bride Contact:</label>
+                        <span id="displayBrideContact"></span>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Package Title -->
+            <div class="package-title">
+                <h2>Wedding Package</h2>
+                <h2 id="packagePriceDisplay">100,000LKR</h2>
+            </div>
+            
+            
+                <!-- Invoice Table -->
+                <table class="invoice-table">
+                        <thead>
+                            <tr>
+                                <th>Description</th>
+                                <th>Type</th>
+                                <th>Quantity</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody id="invoiceItemsBody">
+                            <!-- Items will be added dynamically here -->
+                        </tbody>
+                    
+                </table>
+                
+                <!-- Extras Table -->
+                <div class="package-title">
+                    <h2>Extras</h2>
+                </div>
+                <table class="extras-table" id="extrasTable" >
+                    <!-- <thead class="extras-header">
+                        <tr>
+                            <th colspan="4">Extras</th>
+                        </tr>
+                    </thead> -->
+                    <tbody id="extrasItemsBody">
+                        <!-- Extras will be added dynamically here -->
+                    </tbody>
+                </table>
+            
+            
+            <!-- Invoice Totals -->
+            <div class="invoice-totals">
+                <div class="total-row">
+                    <span>Subtotal: </span>
+                    <span id="subtotal">LKR 0.00</span>
+                </div>
+                <div class="total-row">
+                    <span>Discount: </span>
+                    <span id="discount">LKR 0.00</span>
+                </div>
+                <div class="total-row grand-total">
+                    <span>Total Amount: </span>
+                    <span id="totalAmount">LKR 0.00</span>
+                </div>
+            </div>
+            
+            <!-- Decorative Corner -->
+            <!-- <div class="decorative-corner">
+                <svg class="corner-curves" viewBox="0 0 100 100">
+                    <path d="M0,100 Q30,100 30,70 Q30,40 0,40" fill="#0f3c5d" />
+                    <path d="M0,80 Q15,80 15,65 Q15,50 0,50" fill="#0f3c5d" />
+                    <path d="M0,60 Q5,60 5,55 Q5,50 0,50" fill="#0f3c5d" />
+                </svg>
+            </div> -->
+
+
+
+            <!-- Additional Terms & Conditions Section -->
+            <div class="terms-container">
+                <div class="invoice-section terms-section">
+                    <h3 class="section-title">Bride and Groom Dressing Details</h3>
+                    <div class="info-group">
+                        <label>Bridal Salon Name & Contact Number:</label>
+                        <span id="displayBridalSalonInfo"></span>
+                    </div>
+                    <div class="info-group">
+                        <label>Groom's Dressing Person & Contact Number:</label>
+                        <span id="displayGroomDressingInfo"></span>
+                    </div>
+                    <div class="info-group">
+                        <label>Bridal Group Availability:</label>
+                        <span id="displayBridalGroupAvailability">Yes/No</span>
+                    </div>
+                    <div class="bridal-group">
+                        <div class="info-row">
+                            <div class="info-group half">
+                                <label>Bridesmaid Count:</label>
+                                <span id="displayBridesmaidCount">_____</span>
+                            </div>
+                            <div class="info-group half">
+                                <label>Bestman Count:</label>
+                                <span id="displayBestmanCount">_____</span>
+                            </div>
+                        </div>
+                        <div class="info-row">
+                            <div class="info-group half">
+                                <label>Flower Girl Count:</label>
+                                <span id="displayFlowerGirlCount">_____</span>
+                            </div>
+                            <div class="info-group half">
+                                <label>Pageboy Count:</label>
+                                <span id="displayPageboyCount">_____</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="invoice-section terms-section">
+                    <h3 class="section-title">Terms & Conditions</h3>
+                    <div class="terms-content">
+                        <h4>Booking & Advance Payment</h4>
+                        <p>A non-refundable advance payment of LKR 25,000 is required to confirm the booking.</p>
+                        
+                        <h4>Payment Schedule</h4>
+                        <p>On the wedding day, 75% of the total payment must be settled.</p>
+                        <p>The remaining balance must be cleared before album delivery.</p>
+                        <p>Payment for any additional thank-you cards and enlargements should also be made on the wedding day.</p>
+                        
+                        <h4>Album & Deliverables</h4>
+                        <p>The final wedding album will be delivered within 3 months from the wedding date.</p>
+                        
+                        <h4>Other Terms</h4>
+                        <p>Any additional edits or requests beyond the agreed package may incur extra charges.</p>
+                        
+                        <h4>Cancellations will not be refunded.</h4>
+                        <p>Any additional requests or edits beyond the agreed package may incur extra charges.
+                            Would you like to add any more details, such as cancellation policies or extra service charges?</p>
+                        
+                        <div class="agreement-section">
+                            <h4>Wedding Photography Agreement</h4>
+                            <p>I/We, the undersigned, agree to the terms and conditions stated above regarding the wedding photography services.</p>
+                            <div class="signature-line">
+                                <label>Client Name:</label>
+                                <span class="signature-field">_________________________</span>
+                            </div>
+                            <div class="signature-line">
+                                <label>Signature:</label>
+                                <span class="signature-field">_________________________</span>
+                            </div>
+                            <div class="signature-line">
+                                <label>Date:</label>
+                                <span class="signature-field">_________________________</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="payment-title">Please make the payment to our bank account at:</h3>
+            <div class="payment-container">
+                <div class="invoice-section payment-info">
+                    <div class="bank-details">
+                        <div class="bank-info">
+                            <p><strong>Sampath Bank</strong></p>
+                            <p>Modern Scene ( PVT ) Ltd</p>
+                            <p>Account Number - 1065 1403 4714</p>
+                            <p>Minuwangoda Branch</p>
+                        </div>
+                        <div class="qr-code">
+                            <img src="/assets/qr.jpg" width="60px" alt="QR Code" id="bankQrCode">
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="invoice-section contact-info">
+                    <div class="company-details">
+                        <h3>MODERN SCENE (PVT) LTD</h3>
+                        <h4>Our Contact and Location</h4>
+                        <p><i class="fas fa-phone"></i> Phone: 077 4 890 840 | 070 2 890 840</p>
+                        <p><i class="fas fa-envelope"></i> Email: modernscene.lk@gmail.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Address: 50A/1/1 Airport Road, Minuwangoda</p>
+                        <p><i class="fas fa-globe"></i> Website: www.modernscene.lk</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- PDF Container (hidden, used for PDF generation) -->
+        <div id="pdfContainer" class="hidden pdf-container"></div>
+        
+        <div class="button-container hidden" id="invoiceButtons">
+            <button id="editInvoiceBtn">Edit</button>
+            <button id="downloadPdfBtn">Download PDF</button>
+            <button id="printInvoiceBtn">Print</button>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
