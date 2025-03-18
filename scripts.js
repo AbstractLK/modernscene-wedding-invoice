@@ -54,11 +54,11 @@ document.addEventListener("DOMContentLoaded", function () {
       qtyId: "familyAlbumQty",
     },
     {
-      id: "additionalAlbum",
-      name: "Additional Album",
-      includeId: "includeAdditionalAlbum",
-      sizeId: "additionalAlbumSize",
-      qtyId: "additionalAlbumQty",
+      id: "preShootPhotography",
+      name: "Pre-Shoot Photography",
+      includeId: "includePreShootPhotography",
+      sizeId: "preShootPhotographySize",
+      qtyId: "preShootPhotographyQty",
     },
   ];
 
