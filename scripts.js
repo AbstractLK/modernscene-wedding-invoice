@@ -53,6 +53,13 @@ document.addEventListener("DOMContentLoaded", function () {
       sizeId: "familyAlbumSize",
       qtyId: "familyAlbumQty",
     },
+    {
+      id: "additionalAlbum",
+      name: "Additional Album",
+      includeId: "includeAdditionalAlbum",
+      sizeId: "additionalAlbumSize",
+      qtyId: "additionalAlbumQty",
+    },
   ];
 
   // Define extras with their details
