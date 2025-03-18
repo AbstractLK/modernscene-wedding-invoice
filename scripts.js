@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     {
       id: "preShootAlbum",
-      name: "PRE-SHOOT Album",
+      name: "Pre-Shoot Album",
       includeId: "includePreShootAlbum",
       sizeId: "preShootAlbumSize",
       qtyId: "preShootAlbumQty",
@@ -214,8 +214,8 @@ document.addEventListener("DOMContentLoaded", function () {
     extras.forEach((item) => {
       if (document.getElementById(item.includeId).checked) {
         const row = document.createElement("tr");
-        let size = "N/A";
-        let qty = "N/A";
+        let size = " ";
+        let qty = " ";
 
         if (item.hasSize) {
           size = document.getElementById(item.sizeId).value;
